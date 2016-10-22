@@ -4,16 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'/>
-    <script src="Scripts/jquery-3.1.1.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/Stylesheet.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#btnAcceder').click(function () {
                 var nick = $('#txtUser').val();
                 var pwd = $('#txtPass').val();
-                //alert("hey");
+                // alert("hey");
                 MiFuncionObj(nick, pwd);
             });
         });
@@ -24,7 +27,7 @@
             }
             var actiondata = JSON.stringify(obJason);
             //var actiondata = obJason;
-            //alert(actiondata);
+            //alert("listen");
             $.ajax(
                 {
                     url: "http://localhost/AcornS/WebService.asmx/SetSession",
@@ -33,37 +36,214 @@
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     success: function (msg) {
-                         //alert(msg.d.idUser);
+                              alert(msg.d.idUser);
                         if (msg.d.idUser != 0) {
-                            alert("Welcome User! Have a good day!");
+                            alert("Welcome! " + msg.d.user + " Good day!");
                             window.location.replace("http://localhost/AcornS/RUInterface.aspx");
                         }
                         else {
-                            alert("Incorrect or Invalid User a/o Password ");
+                            alert("Incorrect Login Info (User or Pass)");
                         }
                     },
-                    error: function (result) { alert("ERROR " + result.status + '' + result.statusText); }
+                    error: function (result) { alert("ERROR" + result.status + '' + result.statusText); }
 
                 }
                 );
         }
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
     </script>
 </head>
 <body>
-     <section>
-            <span></span>
-            <h1>Please enter your account</h1>
-            <form>
-                <input placeholder='User' type='text' id="txtUser"/>
-                <input placeholder='Password' type='password' id="txtPass"/>
+    <div class="container">
+        <div class="row">
 
-            </form>
-            <button id="btnAcceder">Enter</button>
-            <h2>
-                <a href='#' >Recover your Account</a>
-                    </h2>
+            <div class="col-lg-4">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Sign in/up
+    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Explore</a></li>
+                        <li data-toggle="modal" data-target="#myModal"><a href="#">Register </a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h1 class="page-header">Success Stories</h1>
+            </div>
+            <div style="padding-left:50px">
 
-        </section>
-    
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-3 thumb">
+                <a href="#" title="Anne Marie" data-toggle="popover" data-trigger="click" data-html="true" 
+                    data-content="<a href='Rogue.aspx'>Her Story</a>">
+                    <img class="img-responsive" src="media/anna.jpg" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-3 thumb">
+                <a href="#" title="Erik" data-toggle="popover" data-trigger="click" data-html="true" 
+                    data-content="<a href='Rogue.aspx'>His Story</a>">
+                    <img class="img-responsive" src="media/erik.jpg" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-3 thumb">
+                <a href="#" title="Logan" data-toggle="popover" data-trigger="click" data-html="true" 
+                    data-content="<a href='Rogue.aspx'>His Story</a>">
+                    <img class="img-responsive" src="media/logan.jpg" />
+                </a>
+            </div>
+            <div>
+                <br />
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-xs-3 thumb">
+                <a href="#" title="Peter" data-toggle="popover" data-trigger="click" data-html="true" 
+                    data-content="<a href='Rogue.aspx'>His Story</a>">
+                    <img class="img-responsive" src="media/Peter.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+                     <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 style="color:red;"><span class="glyphicons glyphicons-user" style="font-size:10px">&nbsp;</span> Access</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label for="usrname"><span class="halflings halflings-user">&nbsp;</span> User</label>
+                                            <input type="text" class="form-control" id="txtUser" placeholder="Please, enter your Username "/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="psw"><span class="glyphicon glyphicon-eye-open"> &nbsp; </span> Password</label>
+                                            <input type="text" class="form-control" id="txtPass" placeholder="Please, enter your password"/>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="checked"/>Remember me?</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-default btn-success btn-block" id ="btnAcceder" ><span class="glyphicon glyphicon-off"></span> Access</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                    <button type="submit" class="btn btn-default btn-default pull right" data-dismiss="modal"><span class="glyphicon-floppy-save"></span> Log In</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> 
+
+    <!--This ends the modal -->
+   <div class="container">
+    <h1>Bootstrap 3 Thumbnail Slider / Carousel</h1>
+
+
+    <!-- thumb navigation carousel -->
+    <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+
+        <!-- thumb navigation carousel items -->
+        <ul class="list-inline">
+            <li>
+                <a id="carousel-selector-0" class="selected">
+                    <img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-1">
+                    <img src="http://placehold.it/80x60&amp;text=two" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-2">
+                    <img src="http://placehold.it/80x60&amp;text=three" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-3">
+                    <img src="http://placehold.it/80x60&amp;text=four" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-4">
+                    <img src="http://placehold.it/80x60&amp;text=five" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-5">
+                    <img src="http://placehold.it/80x60&amp;text=six" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-6">
+                    <img src="http://placehold.it/80x60&amp;text=seven" class="img-responsive">
+                </a>
+            </li>
+            <li>
+                <a id="carousel-selector-7">
+                    <img src="http://placehold.it/80x60&amp;text=eight" class="img-responsive">
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- main slider carousel -->
+    <div class="row">
+        <div class="col-md-12" id="slider">
+
+            <div class="col-md-12" id="carousel-bounding-box">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- main slider carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item" data-slide-number="0">
+                            <img src="http://placehold.it/1200x480&amp;text=one" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="1">
+                            <img src="http://placehold.it/1200x480/888/FFF" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="2">
+                            <img src="http://placehold.it/1200x480&amp;text=three" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="3">
+                            <img src="http://placehold.it/1200x480&amp;text=four" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="4">
+                            <img src="http://placehold.it/1200x480&amp;text=five" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="5">
+                            <img src="http://placehold.it/1200x480&amp;text=six" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="6">
+                            <img src="http://placehold.it/1200x480&amp;text=seven" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="7">
+                            <img src="http://placehold.it/1200x480&amp;text=eight" class="img-responsive">
+                        </div>
+                    </div>
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-arrow-left"></i></a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--/main slider carousel-->
+
+</div>
+    <!--Thiss should be the end of the Carrousel -->
+
 </body>
 </html>

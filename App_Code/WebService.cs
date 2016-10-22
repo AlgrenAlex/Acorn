@@ -27,7 +27,7 @@ public class WebService : System.Web.Services.WebService {
     public Username SetSession(Username parametro)
     {
         // Session["Identificador"] = null;
-        RnLogin on= new RnLogin();// Database Connection
+        RnLogin on = new RnLogin();
         parametro.idUser = on.Login(parametro);
         //HttpContext.Current.Session["identificador"] = parametro.idUser;
         //if (parametro.idUser > 0)
@@ -39,7 +39,9 @@ public class WebService : System.Web.Services.WebService {
         //    parametro.idUser = 0;
         //    return parametro;
         //}
-        //parametro.idUser=1;
+        //parametro.idUser = 1;
         return parametro;
+
+
     }
 }
