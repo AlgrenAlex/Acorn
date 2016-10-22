@@ -36,9 +36,9 @@
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     success: function (msg) {
-                              alert(msg.d.idUser);
+                              //alert(msg.d.idUser);
                         if (msg.d.idUser != 0) {
-                            alert("Welcome! " + msg.d.user + " Good day!");
+                            //alert("Welcome! " + msg.d.user + " Good day!");
                             window.location.replace("http://localhost/AcornS/RUInterface.aspx");
                         }
                         else {
@@ -81,19 +81,19 @@
 
             </div>
             <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-                <a href="#" title="Anne Marie" data-toggle="popover" data-trigger="click" data-html="true" 
+                <a href="#" title="Anne Marie" data-toggle="popover" data-trigger="focus" data-html="true" 
                     data-content="<a href='Rogue.aspx'>Her Story</a>">
                     <img class="img-responsive" src="media/anna.jpg" />
                 </a>
             </div>
             <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-                <a href="#" title="Erik" data-toggle="popover" data-trigger="click" data-html="true" 
+                <a href="#" title="Erik" data-toggle="popover" data-trigger="focus" data-html="true" 
                     data-content="<a href='Rogue.aspx'>His Story</a>">
                     <img class="img-responsive" src="media/erik.jpg" />
                 </a>
             </div>
             <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-                <a href="#" title="Logan" data-toggle="popover" data-trigger="click" data-html="true" 
+                <a href="#" title="Logan" data-toggle="popover" data-trigger="focus" data-html="true" 
                     data-content="<a href='Rogue.aspx'>His Story</a>">
                     <img class="img-responsive" src="media/logan.jpg" />
                 </a>
@@ -105,7 +105,7 @@
 
             </div>
             <div class="col-lg-3 col-md-3 col-xs-3 thumb">
-                <a href="#" title="Peter" data-toggle="popover" data-trigger="click" data-html="true" 
+                <a href="#" title="Peter" data-toggle="popover" data-trigger="focus" data-html="true" 
                     data-content="<a href='Rogue.aspx'>His Story</a>">
                     <img class="img-responsive" src="media/Peter.jpg" />
                 </a>
@@ -147,17 +147,17 @@
 
     <!--This ends the modal -->
    <div class="container">
-    <h1>Bootstrap 3 Thumbnail Slider / Carousel</h1>
+    <h1>Opportunities are waiting for you!</h1>
 
 
     <!-- thumb navigation carousel -->
-    <div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+    <%--<div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
 
         <!-- thumb navigation carousel items -->
         <ul class="list-inline">
             <li>
                 <a id="carousel-selector-0" class="selected">
-                    <img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
+                    <img src="http://schedule.wttw.com/ulphoto/wttw_1340044257.jpg" class="img-responsive">
                 </a>
             </li>
             <li>
@@ -197,7 +197,7 @@
             </li>
         </ul>
 
-    </div>
+    </div>--%>
 
 
     <!-- main slider carousel -->
@@ -209,18 +209,22 @@
                     <!-- main slider carousel items -->
                     <div class="carousel-inner">
                         <div class="active item" data-slide-number="0">
-                            <img src="http://placehold.it/1200x480&amp;text=one" class="img-responsive">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Carpenter Specialist</label>
+                            <img src="http://www.handdyman.com/img/carpenter.jpg" style=" class="img-responsive">
                         </div>
                         <div class="item" data-slide-number="1">
-                            <img src="http://placehold.it/1200x480/888/FFF" class="img-responsive">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Shoe Repair Specialist</label>
+                            <img src="https://cbsla.files.wordpress.com/2013/10/83742949.jpg" class="img-responsive">
                         </div>
                         <div class="item" data-slide-number="2">
-                            <img src="http://placehold.it/1200x480&amp;text=three" class="img-responsive">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Clerk/Cashier</label>   
+                            <img src="http://az616578.vo.msecnd.net/files/2016/01/25/635892768340795711-1712987430_cashier.jpg" class="img-responsive">
                         </div>
                         <div class="item" data-slide-number="3">
-                            <img src="http://placehold.it/1200x480&amp;text=four" class="img-responsive">
+                             <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;DishWasher</label>   
+                            <img src="https://www.bcfr.org/wp-content/uploads/2013/01/049.jpg" class="img-responsive">
                         </div>
-                        <div class="item" data-slide-number="4">
+                       <%-- <div class="item" data-slide-number="4">
                             <img src="http://placehold.it/1200x480&amp;text=five" class="img-responsive">
                         </div>
                         <div class="item" data-slide-number="5">
@@ -231,7 +235,7 @@
                         </div>
                         <div class="item" data-slide-number="7">
                             <img src="http://placehold.it/1200x480&amp;text=eight" class="img-responsive">
-                        </div>
+                        </div>--%>
                     </div>
                     <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-arrow-left"></i></a>
                     <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-arrow-right"></i></a>
