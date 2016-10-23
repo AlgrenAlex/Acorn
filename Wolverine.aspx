@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Rogue.aspx.cs" Inherits="Rogue" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Wolverine.aspx.cs" Inherits="Acorn_Wolverine" %>
+
 
 <!DOCTYPE html>
 
@@ -21,20 +22,22 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="text-right col-xs-4">Name:</div>
-                        <div class="text-left col-xs-6">Anne Marie</div>
+                        <div class="text-left col-xs-6">Logan</div>
                     </div>
                     <div class="row">
                         <div class="text-right col-xs-4">Status:</div>
-                        <div class="text-left col-xs-6" id="status">Recovered</div>
+                        <div class="text-left col-xs-6" id="status">Veteran</div>
                     </div>
                     <div class="row">
                         <div class="text-right col-xs-4">Story:</div>
-                        <div class="text-left col-xs-6" id="departmentname">Raised by her Aunt Carrie after tragedy befell her parents, young Anna Marie ran away from home and was taken in by Mystique and Destiny (Irene Adler), whom Rogue came to regard as her surrogate parents. Rogue's mutant power first manifested in her early teens when she kissed Cody Robbins.</div>
+                        <div class="text-left col-xs-6" id="departmentname">
+                            Born the second son of wealthy landowners John and Elizabeth Howlett in Alberta, Canada during the late 19th Century, James Howlett was a frail boy of poor health. James was largely neglected by his mother, who was institutionalized for a time following the death of her first son, John Jr., in 1897.
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="panel-footer">
-                        <input type="button" value="Help someone like Anne" id="empbutton" />
+                        <input type="button" value="Help someone like Logan" id="empbutton" />
                         <div class="col-xs-10" id="lblstatus"></div>
                     </div>
                 </div>

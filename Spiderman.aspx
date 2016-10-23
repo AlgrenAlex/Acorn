@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Rogue.aspx.cs" Inherits="Rogue" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Spiderman.aspx.cs" Inherits="Acorn_Spiderman" %>
 
 <!DOCTYPE html>
 
@@ -21,20 +21,22 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="text-right col-xs-4">Name:</div>
-                        <div class="text-left col-xs-6">Anne Marie</div>
+                        <div class="text-left col-xs-6">Peter</div>
                     </div>
                     <div class="row">
                         <div class="text-right col-xs-4">Status:</div>
-                        <div class="text-left col-xs-6" id="status">Recovered</div>
+                        <div class="text-left col-xs-6" id="status">Employed</div>
                     </div>
                     <div class="row">
                         <div class="text-right col-xs-4">Story:</div>
-                        <div class="text-left col-xs-6" id="departmentname">Raised by her Aunt Carrie after tragedy befell her parents, young Anna Marie ran away from home and was taken in by Mystique and Destiny (Irene Adler), whom Rogue came to regard as her surrogate parents. Rogue's mutant power first manifested in her early teens when she kissed Cody Robbins.</div>
+                        <div class="text-left col-xs-6" id="departmentname">
+                            Orphaned as a baby when his parents were killed overseas in a plane crash as U.S. government spies, only child Peter Parker was raised by his elderly Uncle Ben and Aunt May. Academically gifted, Peter displayed an uncanny affinity for science that was nothing short of genius. Socially, however, he was painfully shy and the target of much cruelty by his peers at Midtown High School.
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="panel-footer">
-                        <input type="button" value="Help someone like Anne" id="empbutton" />
+                        <input type="button" value="Help someone like Peter" id="empbutton" />
                         <div class="col-xs-10" id="lblstatus"></div>
                     </div>
                 </div>
