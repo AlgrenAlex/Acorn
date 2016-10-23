@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html class="full" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
@@ -36,7 +36,7 @@
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     success: function (msg) {
-                        //alert(msg.d.idUser);
+                              //alert(msg.d.idUser);
                         if (msg.d.idUser != 0) {
                             //alert("Welcome! " + msg.d.user + " Good day!");
                             window.location.replace("http://localhost/AcornS/RUInterface.aspx");
@@ -54,15 +54,6 @@
             $('[data-toggle="popover"]').popover();
         });
     </script>
-    <style>
-        .full {
-    background: url('http://placehold.it/1920x1080') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-    </style>
 </head>
 <body>
     <div class="container">
@@ -161,7 +152,7 @@
                         </div>
                         <div class="form-group">
                             <label for="psw"><span class="glyphicon glyphicon-eye-open">&nbsp; </span>Password</label>
-                            <input type="text" class="form-control" id="txtPass" placeholder="Please, enter your password" />
+                            <input type="text" class="form-control" id="txtPass" placeholder="Please, enter your Password" />
                         </div>
                         <div class="checkbox">
                             <label>
@@ -244,22 +235,31 @@
                     <div id="myCarousel" class="carousel slide">
                         <!-- main slider carousel items -->
                         <div class="carousel-inner">
-                            <div class="active item" data-slide-number="0">
-                                <label style="font-size: large">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Carpenter Specialist</label>
-                                <img src="http://www.handdyman.com/img/carpenter.jpg" style="" class="img-responsive"/>
-                            </div>
-                            <div class="item" data-slide-number="1">
-                                <label style="font-size: large">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Shoe Repair Specialist</label>
-                                <img src="https://cbsla.files.wordpress.com/2013/10/83742949.jpg" class="img-responsive"/>
-                            </div>
-                            <div class="item" data-slide-number="2">
-                                <label style="font-size: large">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Clerk/Cashier</label>
-                                <img src="http://az616578.vo.msecnd.net/files/2016/01/25/635892768340795711-1712987430_cashier.jpg" class="img-responsive"/>
-                            </div>
-                            <div class="item" data-slide-number="3">
-                                <label style="font-size: large">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;DishWasher</label>
-                                <img src="https://www.bcfr.org/wp-content/uploads/2013/01/049.jpg" class="img-responsive"/>
-                            </div>
+                           <div class="active item" data-slide-number="0" onclick="window.location='http://google.com';">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Carpenter Courses Available</label>
+                            <img src="http://www.handdyman.com/img/carpenter.jpg" style=" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="1">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Casserole Program at St. Patrick Center</label>
+                            <img src="http://i0.wp.com/www.neverskipdessertblog.com/wp-content/uploads/2013/08/dsc_0339.jpg" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="2">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Be a Clerk/Cashier Today at lalalaStore</label>   
+                            <img src="http://az616578.vo.msecnd.net/files/2016/01/25/635892768340795711-1712987430_cashier.jpg" class="img-responsive">
+                        </div>
+                        <div class="item" data-slide-number="3">
+                             <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;DishWasher Positions Available at AB Cafe!</label>   
+                            <img src="https://www.bcfr.org/wp-content/uploads/2013/01/049.jpg" class="img-responsive">
+                        </div>
+                       <div class="item" data-slide-number="4">
+                            <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sheltered Awareness Week at St.Louis</label> 
+                            <img src="http://bedfordviewedenvalenews.co.za/wp-content/uploads/sites/22/2016/08/34BeCommBedCS1_68214.jpg" class="img-responsive">
+                        </div>
+                         
+                        <div class="item" data-slide-number="5">
+                             <label style="font-size:large" >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Food Drive at XY Avenue!</label> 
+                            <img src="https://www.thestar.com/content/dam/thestar/news/world/2015/09/16/people-crave-sexist-food-packaging-research-shows/food-gender-obama.jpg.size.custom.crop.1086x711.jpg" class="img-responsive">
+                        </div>
                             <%-- <div class="item" data-slide-number="4">
                             <img src="http://placehold.it/1200x480&amp;text=five" class="img-responsive">
                         </div>
