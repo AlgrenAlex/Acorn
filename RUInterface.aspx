@@ -61,7 +61,7 @@
     </div>
     <!-- Main jumbotron for a primary marketing message or call to action -->
 <%--    <div class="jumbotron">--%>
-    <div>
+      <div>
         <span class="OpportunityPreset" style="font-size:70px"></span>
     </div>
     <div class="PresentWall">
@@ -70,9 +70,9 @@
           Recommended
         </h1>
         <br />
-        <h2>
-            Poetry
-        </h2>
+          <div class="OpportunityShowing" >          
+               <h2>Veteran Job Fair, In XY Street, St Louis!</h2>
+          </div>
       </div>
         </div>
    <%-- </div>--%>

@@ -101,7 +101,23 @@
   top: 0px;
   height: 80px;
   width: 80px;
-  background: url('http://www.hotel-r.net/im/hotel/gr/golden-star-12.jpg') center center no-repeat, #bdc3c7;
+  background: url('http://thetrendguys.com/wp-content/uploads/2012/09/Happy-Person.jpg') center center no-repeat, #bdc3c7;
   background-size: 70px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+.OpportunityShowing {
+      display: block;
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:green;
+  bottom:15px;
+  top: 0px;
+  height: 150px;
+  width: 100%;
+  background-color:darkcyan;
+  background: url('http://unclesamsmisguidedchildren.com/wp-content/uploads/2016/02/vets.jpg') center center no-repeat, #bdc3c7;
+  background-size: 60%;
+  background-position-y:top;
   box-shadow: 1px 1px 2px rgba(0,0,0,.3);
 }
